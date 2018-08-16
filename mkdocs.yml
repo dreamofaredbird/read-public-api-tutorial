@@ -1,0 +1,5 @@
+site_name: Read Public with Public API and insomnia
+
+pages:
+    - Home: index.md
+    - About: Intro.md
