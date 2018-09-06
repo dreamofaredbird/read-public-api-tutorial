@@ -1,55 +1,52 @@
-# Celanda potiturque pervigil
+## Reading Public Data with Insomnia and the ORCID Public API
 
-## Litora misit Colophonius esse adamas retorqueat possent
+You  can read data from the ORCID record using the ORCID Public or Member API and a two step authentication to get the tokens you need to access the data.
 
-Lorem markdownum adamante, Cyllene dixit, quoque; armis an differt oscula, non
-dura contorta linguae finxit solitoque. Stravit medio: modo palus desine
-humumque, et, visa aera sospes convicia? Semper inpediunt **audaci**, tuentur
-isse hos. Tamen alteriusque tepidi diversae; umquam omnia Perseus de purpureus
-nunc tacito. *Acheloe reducere* sedet putes in ferarum misit, tincto in corona
-peti turis animam.
+In this tutorial we will focus on using the free to use software [Insomnia](https://insomnia.rest/) to manage yout API calls, you can just as well do this with swagger or with Curl and you can find documentation in hoow to do tht here and here.
 
-## Manu efficiet concussit quae alvum respicit namque
 
-Concepit unum. Nutu ille polus superat, repulsam toto odissem retemptat una
-adest animum hortis simul lux coniunx: hunc. Nam recessit dixit parentis
-incessere in arbore arbitrio, aurea, mora.
+THis Tutorial will make use of the ORCID sandbox, real world integratiion will use the Production servers and endpoints.
 
-## Respicit mare resedit
+What you will need:
+1. A working Public or Member  API on Sandbox link to the othert API tutorial and member.orcid article for this.
+2. Internets!
+3. A browser so you can follow these insturctions
+4. An sandbox orcid record you can look up data from. Ljnk to the other tutorial for this.
 
-Ab harenosi dabitur dedit semine ergo petit ex inclusit utque pelle mersa
-[cantibus](http://cuspide-pronuba.net/) foeda. Frontem contigit Crotonis, quam
-sed praepetis manibusque ait binas? Latus huc in **Iuno adversa** taedae demere
-[ave tenebrae](http://cum.com/) vias, [precor](http://etiasonis.org/)? Remittit
-coeunt at tendebat forte ipsamque curruque quantoque canum vera vani, fit dant
-mentita, et rorant hostem.
 
-- Arbor enim exercent
-- Inpediunt veni qua mentae sanctique latius inpia
-- Hinc primo naturae
+1. Download the Insomnia APP from https://insomnia.rest/ and install  on you computer Insomnia wortks onMAc PC andLinux.
 
-## Quo iuvenalia namque
+2. Get your access tokens
+Open up Insomnia and click add to start a new request.
 
-Diversa ferox cum languore exanimem aures, nova custodes frustra, prementem
-patriorum tela. Fama deiectuque quem attulit arces, avertit opibusque iuvatis
-auso vulnere consistere ictu. Nil illa os, tibi quae posse, paretur.
+Select Patch in the drop down and Give a titile you will rememeber this one is called get auth toke
 
-1. Pectora seu pro
-2. Meis erat humum saepe
-3. Baculo Echion feruntur
-4. Foret vale studiosior laborent vidit
 
-## In dea
+<PIC>
 
-**Ligno** piorum dederunt, armiferos terribili talis *et* germane mallem mare
-dispar. *Petita micantes* sententia conplexus lascivitque cortice siqua,
-virgineo promptior. Corpore nurus, semianimem nitebant sede omnes siccoque, dum.
-Manu parentis manat, eritque Lycabas, quid vertice neque: ille quantaque
-habemus; et.
 
-Consurgere respicit fumificisque monitu postquam novantur et harundine haec
-videritis strictique tigres artus parvas! E non delphines: exosus suos poterat!
-Stare erat cuspide pectore, prosunt putes reliquerat admoto in hospite esset
-occidit dedit est. Exsurgo licet iterum damnosasque horrida **haec**, dum [illa
-simulatas](http://www.est.net/quam.php) positoque incunabula abnuat. Quae nec,
-quae mandata mavult enixa conchaeque in glacialis talia.
+Slect
+PATCH ▼ https://api.myproduct.com/v1/users
+
+Send
+
+Body ▼ OAuth 2 ▼ Query Header Docs
+GRANT TYPE
+ACCESS TOKEN URL
+client id	APP-XXXXXXXXXXXXXXX
+CLIENT SECRET	XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
+▼ Advanced Options
+SC0PE	/read-public
+credentials &	As Basic Auth Header (default)
+HEADER PREFIX 0
+AUDIENCE©
+REFRESH TOKEN
+n/a
+ACCESS TOKEN
+n/a
+
+Client Credentials
+https://sandbox.orcid.org/oauth/token
+
+Fetch Tokens
